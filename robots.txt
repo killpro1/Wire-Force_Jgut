@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Закрыть от индексации служебные страницы
+Disallow: /Admin.html
+Disallow: /lk.html
+Disallow: /signup.html
+Disallow: /reg.html
+
+# Разрешить все товарные страницы
+Allow: /*.html
+
+# Указать путь к карте сайта
+Sitemap: https://wireforce.ru/sitemap.xml
