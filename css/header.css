@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Логотип */
+.logo a {
+  font-size: 28px;
+  font-weight: 700;
+  color: blueviolet;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #2a78f6;
+}
+
+.logo .force {
+  color: #ffffff;
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+}
+
+/* Шапка сайта */
+.header1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #000;
+  flex-wrap: wrap;
+  min-height: 70px;
+}
+
+.header1 nav {
+  display: block; /* Всегда показываем навигацию на десктопе */
+}
+
+.header1 nav ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+ul.mejd {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+ul.mejd li.button1 a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+#butt1 {
+width: 32.73px;
+height: 32.73px;
+}
+
+header nav ul li {
+    display: flex;
+    padding: 1rem;
+    margin-right: 25px;
+}
+
+/* Делаем при наведение кнопки */
+.button1:hover {
+    background-color: blueviolet;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, border-radius 1s ease;
+}
+
+/* Поисковик */
+.input1 {
+    width: 220px;
+    height: 40px;
+    padding-right: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+/* Лупа */
+#lupa {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+/* ========================================= */
+/* ВАЖНО: Кнопка меню (скрыта на десктопе) */
+/* ========================================= */
+.menu-toggle {
+    display: none; /* По умолчанию скрываем на десктопе */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px 10px;
+    z-index: 1000;
+}
+
+/* ==================== */
+/* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
+/* ==================== */
+
+@media (max-width: 768px) {
+    .header1 {
+        padding: 10px 15px;
+        position: relative;
+        min-height: 70px;
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        flex: 1;
+        text-align: left;
+        order: 1;
+    }
+    
+    .logo a {
+        font-size: 22px;
+    }
+    
+    /* Кнопка меню - показываем только на мобильных */
+    .menu-toggle {
+        display: block !important; /* Теперь показываем */
+        order: 2;
+        background: blueviolet;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 8px 15px;
+        border-radius: 6px;
+        z-index: 1000;
+        margin-left: 10px;
+        transition: all 0.3s ease;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-toggle:hover {
+        background-color: #8a2be2;
+        transform: scale(1.05);
+    }
+    
+    .header1 nav {
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+        display: none;
+        background-color: #000;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        z-index: 999;
+    }
+    
+    .header1 nav.active {
+        display: block;
+    }
+    
+    .mejd {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .button1 {
+        width: 100%;
+        text-align: center;
+        margin-right: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 8px;
+    }
+    
+    .button1 a {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .button1 a:hover {
+        background-color: blueviolet;
+    }
+    
+    /* Поиск */
+    .mejd li:has(.input1) {
+        order: 1;
+        width: 100%;
+        padding: 0 !important;
+        margin: 10px 0 !important;
+        position: relative;
+    }
+    
+    .input1 {
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        padding-right: 40px !important;
+        padding-left: 15px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        border-radius: 8px;
+    }
+    
+    .input1::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    #lupa {
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        filter: invert(1);
+    }
+    
+    .mejd li:has(#butt1),
+    .mejd li:has(#cors) {
+        position: absolute;
+        top: 15px;
+        padding: 0 !important;
+        margin: 0 !important;
+        z-index: 1001;
+    }
+    
+    .mejd li:has(#butt1) {
+        right: 60px;
+    }
+    
+    .mejd li:has(#cors) {
+        right: 15px;
+    }
+    
+    #butt1 img,
+    #cors img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .mejd li:has(#butt1) a,
+    .mejd li:has(#cors) a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(138, 43, 226, 0.8);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .mejd li:has(#butt1) a:hover,
+    .mejd li:has(#cors) a:hover {
+        background: blueviolet;
+        transform: scale(1.1);
+    }
+    
+    /* Анимация для пунктов меню */
+    .header1 nav.active .mejd li {
+        animation: fadeIn 0.5s ease forwards;
+        opacity: 0;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Задержка анимации для каждого пункта */
+    .header1 nav.active .mejd li:nth-child(1) { animation-delay: 0.1s; }
+    .header1 nav.active .mejd li:nth-child(2) { animation-delay: 0.2s; }
+    .header1 nav.active .mejd li:nth-child(3) { animation-delay: 0.3s; }
+    .header1 nav.active .mejd li:nth-child(4) { animation-delay: 0.4s; }
+    .header1 nav.active .mejd li:nth-child(5) { animation-delay: 0.5s; }
+    .header1 nav.active .mejd li:nth-child(6) { animation-delay: 0.6s; }
+    .header1 nav.active .mejd li:nth-child(7) { animation-delay: 0.7s; }
+    .header1 nav.active .mejd li:nth-child(8) { animation-delay: 0.8s; }
+}
+
+@media (max-width: 480px) {
+    .header1 {
+        padding: 8px 10px;
+        min-height: 60px;
+    }
+    
+    .logo a {
+        font-size: 20px;
+    }
+    
+    .menu-toggle {
+        font-size: 18px;
+        padding: 6px 12px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .button1 a {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .mejd li:has(#butt1) {
+        right: 50px;
+    }
+    
+    .input1 {
+        height: 42px;
+        font-size: 14px;
+    }
+    
+    .header1 nav {
+        top: 60px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .header1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .header1 nav {
+        max-height: 60vh;
+        overflow-y: auto;
+        display: none !important;
+    }
+    
+    .header1 nav.active {
+        display: block !important;
+    }
+    
+    .menu-toggle {
+        display: block !important;
+    }
+}

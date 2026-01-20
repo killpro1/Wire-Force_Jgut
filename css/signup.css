@@ -1,0 +1,155 @@
+.registration-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    margin-top: 150px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #6a5acd;
+    outline: none;
+    box-shadow: 0 0 8px rgba(106,90,205,0.3);
+}
+
+.btn-mystic {
+    display: block;
+    width: 100%;
+    margin-top: 32px;
+    padding: 14px 0;
+    background: linear-gradient(135deg, #6a5acd, #836fff);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(106,90,205,0.5);
+    transition: all 0.4s ease;
+    letter-spacing: 1.2px;
+    user-select: none;
+}
+
+.btn-mystic:hover {
+    background: linear-gradient(135deg, #836fff, #6a5acd);
+    box-shadow: 0 8px 16px rgba(131,111,255,0.7);
+}
+
+.btn-mystic:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 10px rgba(106,90,205,0.6);
+}
+
+#regis {
+    color: #333;
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+#regis:hover {
+    color: #555;
+}
+
+/* ==================== */
+/* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
+/* ==================== */
+
+@media (max-width: 768px) {
+    .registration-form {
+        margin: 100px 20px 40px;
+        padding: 25px 20px;
+        max-width: 100%;
+    }
+    
+    .registration-form h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        padding: 14px;
+        font-size: 16px;
+    }
+    
+    .btn-mystic {
+        margin-top: 25px;
+        padding: 15px 0;
+        font-size: 17px;
+    }
+    
+    #regis {
+        padding: 12px 0;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-form {
+        margin: 80px 15px 30px;
+        padding: 20px 15px;
+    }
+    
+    .registration-form h2 {
+        font-size: 22px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .btn-mystic {
+        padding: 14px 0;
+        font-size: 16px;
+    }
+    
+    #regis {
+        font-size: 15px;
+    }
+}
