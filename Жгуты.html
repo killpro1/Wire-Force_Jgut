@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар_1</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/fon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/header.js"></script>
+</head>
+<body>
+    
+    <!-- header 1 -->
+    <header class="header1">
+        <div class="logo">
+            <a href="./index.html">Wire<span class="force">Force</span></a>
+        </div>
+         <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <nav>
+            <ul class="mejd">
+                <li class="button1"><a href="./index.html" id="button1">ГЛАВНАЯ</a></li>
+                <li class="button1"><a href="./komp.html" id="button1">О КОМПАНИИ</a></li>
+                <li class="button1"><a href="./product.html" id="button1">ПРОДУКЦИЯ</a></li>
+                <li class="button1"><a href="./uslugi.html" id="button1">УСЛУГИ</a></li>
+                <li class="button1"><a href="./kont.html" id="button1">КОНТАКТЫ</a></li>
+                <li>
+                    <div style="position: relative; display: inline-block;">
+                      <input type="text" placeholder="Поиск" class="input1" style="padding-right: 30px;">
+                      <img src="./photo/лумпа.svg" alt="Лупа" id="lupa">
+                    </div>
+                  </li>
+                <li>
+                    <a href="./signup.html" id="butt1"><img src="./photo/вхох.svg"></a>
+                </li>
+                <li>
+                    <a href="./cors.html" id="cors"><img src="./photo/корзина.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="catalog-wrapper">
+    <h1>Жгуты</h1>
+
+    <div class="sort-buttons">
+        <button onclick="sortByName()">(А-Я)</button>
+        <button onclick="sortByPriceAsc()">↑</button>
+        <button onclick="sortByPriceDesc()">↓</button>
+    </div>
+
+    <div class="catalog-grid" id="productList">
+        <!-- Товары -->
+        <div class="product-card" data-name="Жгут 1162-10-100СБ" data-price="15000">
+            <a href="./1tovar.html" style="text-decoration: none; color: inherit;">
+                <img src="./photo/Жгут1.jpg" alt="Жгут 1162-10-100СБ">
+                <p><strong>Жгут 1162-10-100СБ</strong></p>
+                <p>Артикул: Т11ЯТ-ЭО-100СБ</p>
+                <p>Вес: 5 кг</p>
+                <p>Цена: <strong>15 000 ₽</strong></p>
+            </a>
+            <button onclick="addToCart('Жгут 1162-10-100СБ')">Купить</button>
+        </div>
+
+        <div class="product-card" data-name="Жгут 1102-10-164СБ" data-price="13242">
+            <a href="./2tovar.html" style="text-decoration: none; color: inherit;">
+                <img src="./photo/Жгут2.jpg" alt="Жгут 1102-10-164СБ">
+                <p><strong>Жгут 1102-10-164СБ</strong></p>
+                <p>Артикул: Т11Я-ЭО-164СБ</p>
+                <p>Вес: 5 кг</p>
+                <p>Цена: <strong>13 242 ₽</strong></p>
+            </a>
+            <button onclick="addToCart('Жгут 1102-10-164СБ')">Купить</button>
+        </div>
+
+        <div class="product-card" data-name="Жгут 2002-10-100-03СБ" data-price="20000">
+            <a href="./3tovar.html" style="text-decoration: none; color: inherit;">
+                <img src="./photo/Жгут3.jpg" alt="Жгут 2002-10-100-03СБ">
+                <p><strong>Жгут 2002-10-100-03СБ</strong></p>
+                <p>Артикул: Т20Я-ЭО-100-03СБ</p>
+                <p>Вес: 5 кг</p>
+                <p>Цена: <strong>20 000 ₽</strong></p>
+            </a>
+            <button onclick="addToCart('Жгут 2002-10-100-03СБ')">Купить</button>
+        </div>
+
+        <div class="product-card" data-name="Жгут 1106-10-157СБ" data-price="30000">
+            <a href="./4tovar.html" style="text-decoration: none; color: inherit;">
+                <img src="./photo/Жгут4.jpg" alt="Жгут 1106-10-157СБ">
+                <p><strong>Жгут 1106-10-157СБ</strong></p>
+                <p>Артикул: Т11К-ЭО-157СБ</p>
+                <p>Вес: 5 кг</p>
+                <p>Цена: <strong>30 000 ₽</strong></p>
+            </a>
+            <button onclick="addToCart('Жгут 1106-10-157СБ')">Купить</button>
+        </div>
+
+        <div class="product-card" data-name="Жгут 1152-10-126-01СБ" data-price="40000">
+            <a href="./5tovar.html" style="text-decoration: none; color: inherit;">
+                <img src="./photo/Жгут5.jpg" alt="Жгут 1152-10-126-01СБ">
+                <p><strong>Жгут 1152-10-126-01СБ</strong></p>
+                <p>Артикул: Т11S02Я-ЭО-126-01СБ</p>
+                <p>Вес: 6 кг</p>
+                <p>Цена: <strong>40 000 ₽</strong></p>
+            </a>
+            <button onclick="addToCart('Жгут 1152-10-126-01СБ')">Купить</button>
+        </div>
+    </div>
+</section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Каталог продукции</h3>
+                <ul>
+                    <li><a href="./Жгуты.html">Жгуты</a></li>
+                    <li><a href="./Реле.html">Реле 24В</a></li>
+                    <li><a href="./Прочие детали.html">Замок зажигания</a></li>
+                    <li><a href="./Прочие детали.html">Детали</a></li>
+                    <li><a href="./Сигналы.html">Сигналы</a></li>
+                    <li><a href="./Кнопки.html">Кнопки</a></li>
+                    <li><a href="./Контактор.html">Контактор</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <p>Телефоны:</p>
+                <p>+7 (927) 854-79-52</p>
+                <p>Email: <a href="mailto:killpro0402@gmail.com">killpro0402@gmail.com</a></p>
+                <button class="footer-button">Оставить заявку</button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

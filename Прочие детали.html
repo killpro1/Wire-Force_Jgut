@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар_2</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/fon.js"></script>
+    <script src="./js/header.js"></script>
+</head>
+<body>
+
+   <!-- header 1 -->
+    <header class="header1">
+        <div class="logo">
+            <a href="./index.html">Wire<span class="force">Force</span></a>
+        </div>
+         <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <nav>
+            <ul class="mejd">
+                <li class="button1"><a href="./index.html" id="button1">ГЛАВНАЯ</a></li>
+                <li class="button1"><a href="./komp.html" id="button1">О КОМПАНИИ</a></li>
+                <li class="button1"><a href="./product.html" id="button1">ПРОДУКЦИЯ</a></li>
+                <li class="button1"><a href="./uslugi.html" id="button1">УСЛУГИ</a></li>
+                <li class="button1"><a href="./kont.html" id="button1">КОНТАКТЫ</a></li>
+                <li>
+                    <div style="position: relative; display: inline-block;">
+                      <input type="text" placeholder="Поиск" class="input1" style="padding-right: 30px;">
+                      <img src="./photo/лумпа.svg" alt="Лупа" id="lupa">
+                    </div>
+                  </li>
+                <li>
+                    <a href="./signup.html" id="butt1"><img src="./photo/вхох.svg"></a>
+                </li>
+                <li>
+                    <a href="./cors.html" id="cors"><img src="./photo/корзина.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="catalog-wrapper">
+        <h1>Прочие детали</h1>
+
+        <div class="sort-buttons">
+            <button onclick="sortByName()">(А-Я)</button>
+            <button onclick="sortByPriceAsc()">↑</button>
+            <button onclick="sortByPriceDesc()">↓</button>
+        </div>
+
+        <div class="catalog-grid" id="productList">
+            <!-- Товары -->
+
+            <div class="product-card" data-name="Колодка соединительная 1-на контактная" data-price="100">
+                <a href="./1tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Колодка.png" alt="Колодка">
+                    <p><strong>Колодка соединительная 1-на контактная</strong></p>
+                    <p>Артикул: 5622486423</p>
+                    <p>Длина: 150 мм</p>
+                    <p>Цена: <strong>100 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Колодка соединительная 1-на контактная')">Купить</button>
+            </div>
+
+            <div class="product-card" data-name="Колодка соединительная 2-х контактная" data-price="110">
+                <a href="./2tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Колдка2.png" alt="Колодка">
+                    <p><strong>Колодка соединительная 2-х контактная</strong></p>
+                    <p>Артикул: 5630844006</p>
+                    <p>Длина: 150 мм</p>
+                    <p>Цена: <strong>110 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Колодка соединительная 2-х контактная')">Купить</button>
+            </div>
+
+            <div class="product-card" data-name="Колодка соединительная 6-и контактная" data-price="165">
+                <a href="./3tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Колдка3.png" alt="Колодка">
+                    <p><strong>Колодка соединительная 6-и контактная</strong></p>
+                    <p>Артикул: 5630844286</p>
+                    <p>Длина: 140 мм</p>
+                    <p>Цена: <strong>165 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Колодка соединительная 6-и контактная')">Купить</button>
+                </div>
+
+            <div class="product-card" data-name="Колодка соединительная 8-ми контактная" data-price="210">
+                <a href="./4tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Колдка4.png" alt="Колодка">
+                    <p><strong>Колодка соединительная 8-ми контактная</strong></p>
+                    <p>Артикул: 5630851837</p>
+                    <p>Длина: 140 мм</p>
+                    <p>Цена: <strong>210 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Колодка соединительная 8-ми контактная')">Купить</button>
+            </div>
+
+            <div class="product-card" data-name="Наконечник" data-price="375">
+                <a href="./5tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Наконечник.png" alt="Наконечник">
+                    <p><strong>Наконечник</strong></p>
+                    <p>Артикул: 5915809124</p>
+                    <p>Материал: медь</p>
+                    <p>Цена: <strong>375 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Наконечник')">Купить</button>
+            </div>
+            <div class="product-card" data-name="Клемма универсальная монтажная 3-проводная" data-price="310">
+                <a href="./6tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Клемма.png" alt="Клемма">
+                    <p><strong>Клемма универсальная монтажная 3-проводная</strong></p>
+                    <p>Артикул: 4392619123</p>
+                    <p>Минимальное сечение: 0.08 кв. мм</p>
+                    <p>Цена: <strong>310 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Клемма универсальная монтажная 3-проводная')">Купить</button>
+            </div>
+            <div class="product-card" data-name="Замок зажигания" data-price="400">
+                <a href="./7tovar_proch.html" style="text-decoration: none; color: inherit;">
+                    <img src="./photo/Замок зажигания.png" alt="Замок зажигания">
+                    <p><strong>Замок зажигания</strong></p>
+                    <p>Артикул: 4406643470</p>
+                    <p>Цена: <strong>400 ₽</strong></p>
+                </a>
+                <button onclick="addToCart('Замок зажигания')">Купить</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Каталог продукции</h3>
+                <ul>
+                    <li><a href="./Жгуты.html">Жгуты</a></li>
+                    <li><a href="./Реле.html">Реле 24В</a></li>
+                    <li><a href="./Прочие детали.html">Замок зажигания</a></li>
+                    <li><a href="./Прочие детали.html">Детали</a></li>
+                    <li><a href="./Сигналы.html">Сигналы</a></li>
+                    <li><a href="./Кнопки.html">Кнопки</a></li>
+                    <li><a href="./Контактор.html">Контактор</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <p>Телефоны:</p>
+                <p>+7 (927) 854-79-52</p>
+                <p>Email: <a href="mailto:killpro0402@gmail.com">killpro0402@gmail.com</a></p>
+                <button class="footer-button">Оставить заявку</button>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

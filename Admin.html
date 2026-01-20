@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - WireForce</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/lk.css">
+    <script src="./js/header.js"></script>
+</head>
+<body>
+    
+    <header class="header1">
+        <div class="logo">
+            <a href="./index.html">Wire<span class="force">Force</span></a>
+        </div>
+         <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <nav>
+            <ul class="mejd">
+                <li class="button1"><a href="./index.html" id="button1">ГЛАВНАЯ</a></li>
+                <li class="button1"><a href="./komp.html" id="button1">О КОМПАНИИ</a></li>
+                <li class="button1"><a href="./product.html" id="button1">ПРОДУКЦИЯ</a></li>
+                <li class="button1"><a href="./uslugi.html" id="button1">УСЛУГИ</a></li>
+                <li class="button1"><a href="./kont.html" id="button1">КОНТАКТЫ</a></li>
+                <li>
+                    <div style="position: relative; display: inline-block;">
+                      <input type="text" placeholder="Поиск" class="input1" style="padding-right: 30px;">
+                      <img src="./photo/лумпа.svg" alt="Лупа" id="lupa">
+                    </div>
+                </li>
+                <li>
+                    <a href="./lk.html" id="butt1"><img src="./photo/вхох.svg"></a>
+                </li>
+                <li>
+                    <a href="./cors.html" id="cors"><img src="./photo/корзина.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <div class="admin-header">
+            <h1>Админ-панель</h1>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="25" fill="#3498db"/>
+                        <text x="25" y="30" text-anchor="middle" fill="white" font-size="18">АД</text>
+                    </svg>
+                </div>
+                <div class="user-details">
+                    <h3>Администратор</h3>
+                    <p>admin@wireforce.ru</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="admin-grid">
+            <div class="admin-card">
+                <h3>Общая статистика</h3>
+                <div class="admin-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-label">Пользователей</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">324</div>
+                        <div class="stat-label">Заказов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">89,540</div>
+                        <div class="stat-label">Доход (руб.)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-card">
+                <h3>Статус заказов</h3>
+                <div class="admin-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Ожидают</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">В обработке</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">267</div>
+                        <div class="stat-label">Завершены</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-card">
+                <h3>Быстрые действия</h3>
+                <div class="quick-actions">
+                    <button class="admin-btn">Добавить товар</button>
+                    <button class="admin-btn">Создать скидку</button>
+                    <button class="admin-btn">Отправить уведомление</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Управление контентом -->
+        <div class="admin-section">
+            <h2>Управление контентом</h2>
+            
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="products">Товары</button>
+                    <button class="tab-button" data-tab="categories">Категории</button>
+                    <button class="tab-button" data-tab="pages">Страницы</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="products">
+                        <div class="admin-search">
+                            <input type="text" placeholder="Поиск товаров...">
+                        </div>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Название</th>
+                                    <th>Категория</th>
+                                    <th>Цена</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td>Жгут проводов Четра Т9</td>
+                                    <td>Жгуты</td>
+                                    <td>15,400 ₽</td>
+                                    <td><span class="status-badge status-completed">В наличии</span></td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                        <button class="admin-btn admin-btn-danger">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>Реле 24В 30А</td>
+                                    <td>Реле</td>
+                                    <td>850 ₽</td>
+                                    <td><span class="status-badge status-completed">В наличии</span></td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                        <button class="admin-btn admin-btn-danger">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td>Замок зажигания Четра</td>
+                                    <td>Детали</td>
+                                    <td>3,200 ₽</td>
+                                    <td><span class="status-badge status-pending">Ожидается</span></td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                        <button class="admin-btn admin-btn-danger">Удалить</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane" id="categories">
+                        <p>Управление категориями товаров</p>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Название</th>
+                                    <th>Кол-во товаров</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#C01</td>
+                                    <td>Жгуты</td>
+                                    <td>24</td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                        <button class="admin-btn admin-btn-danger">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#C02</td>
+                                    <td>Реле</td>
+                                    <td>18</td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                        <button class="admin-btn admin-btn-danger">Удалить</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#C03</td>
+                                    <td>Детали</td>
+                                    <td>32</td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                        <button class="admin-btn admin-btn-danger">Удалить</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane" id="pages">
+                        <p>Управление страницами сайта</p>
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Страница</th>
+                                    <th>Последнее изменение</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Главная</td>
+                                    <td>15.12.2025</td>
+                                    <td><span class="status-badge status-completed">Опубликована</span></td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>О компании</td>
+                                    <td>10.12.2025</td>
+                                    <td><span class="status-badge status-completed">Опубликована</span></td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Продукция</td>
+                                    <td>12.12.2025</td>
+                                    <td><span class="status-badge status-completed">Опубликована</span></td>
+                                    <td>
+                                        <button class="admin-btn">Редактировать</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Управление пользователями -->
+        <div class="admin-section">
+            <h2>Управление пользователями</h2>
+            <div class="admin-search">
+                <input type="text" placeholder="Поиск пользователей...">
+            </div>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Email</th>
+                        <th>Телефон</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#U001</td>
+                        <td>Name</td>
+                        <td>name@example.com</td>
+                        <td>+7 (999) 123-45-67</td>
+                        <td><span class="status-badge status-completed">Активен</span></td>
+                        <td>
+                            <button class="admin-btn">Редактировать</button>
+                            <button class="admin-btn admin-btn-danger">Заблокировать</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#U002</td>
+                        <td>What</td>
+                        <td>lets@example.com</td>
+                        <td>+7 (999) 234-56-78</td>
+                        <td><span class="status-badge status-completed">Активен</span></td>
+                        <td>
+                            <button class="admin-btn">Редактировать</button>
+                            <button class="admin-btn admin-btn-danger">Заблокировать</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#U003</td>
+                        <td>Kak</td>
+                        <td>Kak12@example.com</td>
+                        <td>+7 (999) 345-67-89</td>
+                        <td><span class="status-badge status-pending">Неактивен</span></td>
+                        <td>
+                            <button class="admin-btn">Редактировать</button>
+                            <button class="admin-btn admin-btn-success">Активировать</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Управление заказами -->
+        <div class="admin-section">
+            <h2>Управление заказами</h2>
+            <div class="admin-search">
+                <input type="text" placeholder="Поиск заказов...">
+            </div>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID заказа</th>
+                        <th>Пользователь</th>
+                        <th>Дата</th>
+                        <th>Сумма</th>
+                        <th>Статус</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#24567</td>
+                        <td>Иван Петров</td>
+                        <td>15.12.2025</td>
+                        <td>30,800 ₽</td>
+                        <td><span class="status-badge status-processing">В обработке</span></td>
+                        <td>
+                            <button class="admin-btn">Просмотр</button>
+                            <button class="admin-btn admin-btn-success">Подтвердить</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#24566</td>
+                        <td>Мария Сидорова</td>
+                        <td>14.12.2025</td>
+                        <td>15,400 ₽</td>
+                        <td><span class="status-badge status-completed">Завершен</span></td>
+                        <td>
+                            <button class="admin-btn">Просмотр</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#24565</td>
+                        <td>Сергей Козлов</td>
+                        <td>13.12.2025</td>
+                        <td>5,200 ₽</td>
+                        <td><span class="status-badge status-pending">Ожидает оплаты</span></td>
+                        <td>
+                            <button class="admin-btn">Просмотр</button>
+                            <button class="admin-btn admin-btn-success">Подтвердить оплату</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Каталог продукции</h3>
+                <ul>
+                    <li><a href="./Жгуты.html">Жгуты</a></li>
+                    <li><a href="./Реле.html">Реле 24В</a></li>
+                    <li><a href="./Прочие детали.html">Замок зажигания</a></li>
+                    <li><a href="./Прочие детали.html">Детали</a></li>
+                    <li><a href="./Сигналы.html">Сигналы</a></li>
+                    <li><a href="./Кнопки.html">Кнопки</a></li>
+                    <li><a href="./Контактор.html">Контактор</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <p>Телефоны:</p>
+                <p>+7 (927) 854-79-52</p>
+                <p>Email: <a href="mailto:killpro0402@gmail.com">killpro0402@gmail.com</a></p>
+                <button class="footer-button">Оставить заявку</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Обработка вкладок
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Убираем активный класс у всех кнопок
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Добавляем активный класс текущей кнопке
+                this.classList.add('active');
+                
+                // Скрываем все вкладки
+                document.querySelectorAll('.tab-pane').forEach(pane => {
+                    pane.classList.remove('active');
+                });
+                
+                // Показываем нужную вкладку
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Обработка кнопок админ-панели
+        document.querySelectorAll('.admin-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.classList.contains('admin-btn-danger')) {
+                    alert('Функция в разработке');
+                } else {
+                    if(confirm('Вы уверены, что хотите выполнить это действие?')) {
+                        alert('Действие выполнено');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
