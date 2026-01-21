@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - WireForce</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/lk.css">
+    <script src="./js/header.js"></script>
+</head>
+<body>
+    
+    <header class="header1">
+        <div class="logo">
+            <a href="./index.html">Wire<span class="force">Force</span></a>
+        </div>
+         <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <nav>
+            <ul class="mejd">
+                <li class="button1"><a href="./index.html" id="button1">ГЛАВНАЯ</a></li>
+                <li class="button1"><a href="./komp.html" id="button1">О КОМПАНИИ</a></li>
+                <li class="button1"><a href="./product.html" id="button1">ПРОДУКЦИЯ</a></li>
+                <li class="button1"><a href="./uslugi.html" id="button1">УСЛУГИ</a></li>
+                <li class="button1"><a href="./kont.html" id="button1">КОНТАКТЫ</a></li>
+                <li>
+                    <div style="position: relative; display: inline-block;">
+                      <input type="text" placeholder="Поиск" class="input1" style="padding-right: 30px;">
+                      <img src="./photo/лумпа.svg" alt="Лупа" id="lupa">
+                    </div>
+                </li>
+                <li>
+                    <a href="./lk.html" id="butt1"><img src="./photo/вхох.svg"></a>
+                </li>
+                <li>
+                    <a href="./cors.html" id="cors"><img src="./photo/корзина.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="lk-main">
+        <div class="lk-header">
+            <h2>Личный кабинет</h2>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="25" fill="#3498db"/>
+                        <text x="25" y="30" text-anchor="middle" fill="white" font-size="18">ИП</text>
+                    </svg>
+                </div>
+                <div class="user-details">
+                    <h3>Name</h3>
+                    <p>name@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lk-grid">
+            <!-- Профиль -->
+            <div class="lk-card">
+                <div class="card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#3498db">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <h3>Личные данные</h3>
+                </div>
+                <div class="card-content">
+                    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                    <p><strong>Компания:</strong> ООО "СтройТех"</p>
+                    <p><strong>Должность:</strong> Менеджер по закупкам</p>
+                    <button class="lk-btn btn-edit">Редактировать</button>
+                </div>
+            </div>
+
+            <!-- Заказы -->
+            <div class="lk-card">
+                <div class="card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#3498db">
+                        <path d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z"/>
+                    </svg>
+                    <h3>Последний заказ</h3>
+                </div>
+                <div class="card-content">
+                    <p><strong>№24567</strong> от 15.12.2025</p>
+                    <p>Жгут проводов Четра Т9 - 2 шт.</p>
+                    <p class="order-total">30 800 ₽</p>
+                    <button class="lk-btn btn-details">Подробнее</button>
+                </div>
+            </div>
+
+            <!-- Избранное -->
+            <div class="lk-card">
+                <div class="card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#3498db">
+                        <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+                    </svg>
+                    <h3>Избранное</h3>
+                </div>
+                <div class="card-content">
+                    <p>3 товара в избранном</p>
+                    <ul class="favorites-list">
+                        <li>Жгут проводов Четра Т11</li>
+                        <li>Замок зажигания Четра</li>
+                        <li>Реле 24В 30А</li>
+                    </ul>
+                    <button class="lk-btn btn-view">Посмотреть все</button>
+                </div>
+            </div>
+
+            <!-- Адреса -->
+            <div class="lk-card">
+                <div class="card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#3498db">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <h3>Адреса доставки</h3>
+                </div>
+                <div class="card-content">
+                    <p><strong>Основной адрес:</strong></p>
+                    <p>г. Чебоксары, ул. Ленина, д. 123, оф. 45</p>
+                    <button class="lk-btn btn-manage">Управление адресами</button>
+                </div>
+            </div>
+
+            <!-- Безопасность -->
+            <div class="lk-card">
+                <div class="card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#3498db">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                    </svg>
+                    <h3>Безопасность</h3>
+                </div>
+                <div class="card-content">
+                    <p>Последнее изменение пароля: 01.12.2025</p>
+                    <button class="lk-btn btn-change">Сменить пароль</button>
+                </div>
+            </div>
+
+            <!-- Выход -->
+            <div class="lk-card logout-card">
+                <div class="card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#e74c3c">
+                        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                    </svg>
+                    <h3>Выход</h3>
+                </div>
+                <div class="card-content">
+                    <p>Завершите текущий сеанс работы</p>
+                    <button class="lk-btn btn-logout">Выйти из аккаунта</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Каталог продукции</h3>
+                <ul>
+                    <li><a href="./Жгуты.html">Жгуты</a></li>
+                    <li><a href="./Реле.html">Реле 24В</a></li>
+                    <li><a href="./Прочие детали.html">Замок зажигания</a></li>
+                    <li><a href="./Прочие детали.html">Детали</a></li>
+                    <li><a href="./Сигналы.html">Сигналы</a></li>
+                    <li><a href="./Кнопки.html">Кнопки</a></li>
+                    <li><a href="./Контактор.html">Контактор</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <p>Телефоны:</p>
+                <p>+7 (927) 854-79-52</p>
+                <p>Email: <a href="mailto:killpro0402@gmail.com">killpro0402@gmail.com</a></p>
+                <a href="./index.html#form2">
+                    <button class="footer-button">Оставить заявку</button>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Простая обработка кнопок
+        document.querySelectorAll('.btn-edit, .btn-details, .btn-view, .btn-manage, .btn-change').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Функция в разработке');
+            });
+        });
+
+        document.querySelector('.btn-logout').addEventListener('click', function() {
+            if(confirm('Вы уверены, что хотите выйти?')) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
