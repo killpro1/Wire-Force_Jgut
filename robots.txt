@@ -11,4 +11,5 @@ Disallow: /reg.html
 Allow: /*.html
 
 # Указать путь к карте сайта
-Sitemap: https://wireforce.ru/sitemap.xml
+
+Sitemap: https://killpro1.github.io/Wire-Force_Jgut/sitemap.xml
