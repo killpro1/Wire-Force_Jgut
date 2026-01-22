@@ -8,9 +8,13 @@
 html {
     scrollbar-gutter: stable;
 }
+:root {
+    --button-color:#007acc;
+    --background-color:#D8D7D7;
+}
 body {
     transition: background-color 0.5s ease, color 0.5s ease;
-    background-color: #D8D7D7;
+     background-color: var(--background-color);
 }
 
 h1 {
@@ -972,3 +976,4 @@ html {
     }
 
 }
+
